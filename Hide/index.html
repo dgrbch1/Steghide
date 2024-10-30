@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganography Tutorial: Extracting Hidden Messages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 15px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .caption {
+            text-align: center;
+            font-style: italic;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #333;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Extracting Hidden Messages with Steghide</h1>
+
+    <!-- Introduction -->
+    <div class="section">
+        <p>In this tutorial, we'll walk through the steps of embedding and extracting hidden messages within images using the <strong>steghide</strong> tool. Steganography allows for hidden information to be embedded in various media formats, providing a discreet way of communication.</p>
+    </div>
+
+    <!-- Step 1: Embedding Data -->
+    <div class="section">
+        <h2>Step 1: Embedding Data into an Image</h2>
+        <p>To embed a hidden message (emb.txt) within an image (cvr.jpg), use the following command:</p>
+        <p><code>steghide embed -cf cvr.jpg -ef emb.txt</code></p>
+        <img src="confuse.png" alt="Embedding Data Command">
+        <div class="caption">Screenshot #1: Command output of <code>steghide embed</code> showing embedded data.</div>
+    </div>
+
+    <!-- Step 2: Checking Image with Embedded Data -->
+    <div class="section">
+        <h2>Step 2: Checking the Embedded Data</h2>
+        <p>To verify the embedded data in the image, use the command:</p>
+        <p><code>steghide info cat.jpg</code></p>
+        <img src="all.png" alt="Steghide Info Command">
+        <div class="caption">Screenshot #2: Output of the <code>steghide info</code> command showing details of the hidden data.</div>
+    </div>
+
+    <!-- Step 3: Extracting Embedded Data -->
+    <div class="section">
+        <h2>Step 3: Extracting the Hidden Message</h2>
+        <p>To extract the embedded message from the image, use:</p>
+        <p><code>steghide extract -sf cat.jpg -xf embeddedmessage.txt</code></p>
+        <img src="decrpytion.png" alt="Steghide Extract Command">
+        <div class="caption">Screenshot #3: Extracting the hidden message using <code>steghide extract</code> command.</div>
+    </div>
+
+    <!-- Step 4: Displaying the Extracted Message -->
+    <div class="section">
+        <h2>Step 4: Viewing the Extracted Message</h2>
+        <p>Once the message is extracted, you can view it with the following command:</p>
+        <p><code>cat embeddedmessage.txt</code></p>
+        <img src="chatbot.png" alt="Viewing Extracted Message">
+        <div class="caption">Screenshot #4: Displaying the content of the extracted message with <code>cat embeddedmessage.txt</code>.</div>
+    </div>
+
+    <!-- GIF Section -->
+    <div class="section">
+        <h2>Process Overview</h2>
+        <p>This GIF summarizes the entire process, from embedding to extracting the hidden message.</p>
+        <img src="Animation3.gif" alt="Steghide Process Overview GIF">
+        <div class="caption">Process Overview GIF: Embedding and extracting data using <strong>steghide</strong>.</div>
+    </div>
+</div>
+
+</body>
+</html>
