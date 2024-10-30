@@ -28,26 +28,34 @@ The purpose of this website is to provide a visual guide on using **steghide**, 
 ### Step-by-Step Guide
 
 1. **Embedding Data into an Image**
-   - ![Embedding Data](./confuse.png
+   
      
+     ![confuse](https://github.com/user-attachments/assets/aeb931f6-79ca-4c72-9dbc-b66939d2f07f)
+
    - Command: `steghide embed -cf cvr.jpg -ef emb.txt`
 
 2. **Checking the Embedded Data**
-   - ![Checking Embedded Data](./all.png)
+
+  ![all](https://github.com/user-attachments/assets/39c34323-67bb-42e9-8e53-3ad712dd5e6f)
+ 
    - Command: `steghide info cat.jpg`
 
 3. **Extracting the Hidden Message**
-   - ![Extracting Message](./decryption.png)
+   - ![decrpytion](https://github.com/user-attachments/assets/7834a41f-97e7-4bfc-bcbc-39dd71656c27)
+
    - Command: `steghide extract -sf cat.jpg -xf embeddedmessage.txt`
 
 4. **Viewing the Extracted Message**
-   - ![Viewing Extracted Message](./chatbot.png)
+  - ![chatbot](https://github.com/user-attachments/assets/234c8bb1-07b4-4f9b-ac61-3bf383f8588a)
+
    - Command: `cat embeddedmessage.txt`
 
 ## GIF Summary
 
 To provide a quick overview of the process, a GIF is included to demonstrate the entire workflow from embedding to extracting a message.
-![Steganography Process GIF](./Animation3.gif)
+
+![Animation3](https://github.com/user-attachments/assets/229f26c7-7c2f-4659-a087-89bb7a4fa0e5)
+
 
 ## How to Run the Project
 
